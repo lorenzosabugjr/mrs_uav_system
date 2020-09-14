@@ -42,7 +42,7 @@ ln -sf ~/git/simulation
 
 cd $WORKSPACE_PATH
 source /opt/ros/$ROS_DISTRO/setup.bash
-command catkin build mavros
+command catkin build mavros -j2
 [ -z "$TRAVIS_CI" ] && command catkin build -j2 -c --mem-limit 75%
 [ ! -z "$TRAVIS_CI" ] && command catkin build -j2
 
